@@ -1,0 +1,6 @@
+@import "nativescript-theme-core/css/core.light.css";
+
+ActionBar {
+    background: linear-gradient(to bottom, #000000 0%, #262626 100%);
+    color: #fff;
+}
