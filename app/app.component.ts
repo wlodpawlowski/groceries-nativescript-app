@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './shared/user/user.model';
 
 @Component({
   selector: "gr-login",
@@ -7,7 +8,18 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  public user: User;
+  public isLoggingIn: boolean = true;
+
+  constructor() {
+    this.user = new User();
+  }
+
   public submit(): void {
-    console.log('Hello my dear world :)');
+    alert('Your\'re using: ' + this.user.email);
+  }
+
+  public toggleDisplay(): void {
+    this.isLoggingIn = !this.isLoggingIn;
   }
 }
